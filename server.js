@@ -1,7 +1,7 @@
 module.exports = function setupServer() {
   const express = require('express');
   const app = express();
-  const PORT = 8000;
+  const PORT = process.env.PORT;
 
   app.use(express.static('docs'));
 
