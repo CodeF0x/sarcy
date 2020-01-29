@@ -1,7 +1,7 @@
 const telegraf = require('telegraf');
 const uuid1 = require('uuid/v1');
 
-bot = new telegraf('1068551164:AAGWO-GsNXZLJ9JTAnFh_fiVyxXM3-31sSI');
+bot = new telegraf(process.env.TOKEN);
 
 bot.on('inline_query', ({
     inlineQuery,
