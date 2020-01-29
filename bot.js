@@ -3,6 +3,31 @@ const uuid1 = require('uuid/v1');
 
 bot = new telegraf(process.env.TOKEN);
 
+bot.start(ctx => {
+    const message = 'Hello. Use /help for help.';
+    ctx.reply(message);
+});
+
+bot.help(ctx => {
+    const message = `
+    Write me something and I'll send it back to you but in sArCaSm font, so you can copy and paste it.
+
+    Or
+
+    Just type "@sarcybot I want this in sarcasm font" in another chat and I'll do all the things for you.
+    `;
+    ctx.reply(message);
+});
+
+bot.on('message', ctx => {
+    if (ctx.message === '/start' || ctx.message === '/help') {
+        return;
+    }
+
+    const sarcasm = makeSarcasm(ctx.message);
+    ctx.reply(sarcasm);
+});
+
 bot.on('inline_query', ({
     inlineQuery,
     answerInlineQuery
