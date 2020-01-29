@@ -4,7 +4,8 @@
   "description": "Telegram bot that writes sArCaSm font for you.",
   "main": "bot.js",
   "scripts": {
-    "test": "npm start"
+    "test": "npm start",
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
