@@ -1,0 +1,30 @@
+{
+  "name": "sarcasm",
+  "version": "1.0.0",
+  "description": "Telegram bot that writes sArCaSm font for you.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeF0x/sarcasm.git"
+  },
+  "keywords": [
+    "telegram",
+    "telegram-bot",
+    "telegram-bot-api",
+    "fun",
+    "fun-bot"
+  ],
+  "author": "Tobias \"CodeF0x\" Oettl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeF0x/sarcasm/issues"
+  },
+  "homepage": "https://github.com/CodeF0x/sarcasm#readme",
+  "dependencies": {
+    "telegraf": "^3.36.0",
+    "uuid": "^3.4.0"
+  }
+}
