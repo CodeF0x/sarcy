@@ -1,5 +1,6 @@
 const telegraf = require('telegraf');
 const uuid1 = require('uuid/v1');
+const setupServer = require('./server');
 
 bot = new telegraf(process.env.TOKEN);
 
@@ -51,8 +52,6 @@ bot.on('choosen_inline_result', ({ chosenInlineResult }) => {
   console.log(chosenInlineResult);
 });
 
-bot.launch();
-
 function makeSarcasm(string) {
   const sarcasm = [];
 
@@ -65,3 +64,6 @@ function makeSarcasm(string) {
   }
   return sarcasm.join('');
 }
+
+bot.launch();
+setupServer();
