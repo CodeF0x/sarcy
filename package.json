@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/CodeF0x/sarcasm#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "telegraf": "^3.36.0",
     "uuid": "^3.4.0"
   }
