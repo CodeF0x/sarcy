@@ -5,7 +5,7 @@ const setupServer = require('./server');
 bot = new telegraf(process.env.TOKEN);
 
 bot.start(ctx => {
-  const message = 'Hello. Use /help for help.';
+  const message = `Hello, ${ctx.message.from.username}. Use /help for help.`;
   ctx.reply(message);
 });
 
@@ -21,11 +21,12 @@ bot.help(ctx => {
 });
 
 bot.on('message', ctx => {
-  if (ctx.message === '/start' || ctx.message === '/help') {
+  const msg = ctx.message.text;
+  if (msg === '/start' || msg === '/help') {
     return;
   }
 
-  const sarcasm = makeSarcasm(ctx.message);
+  const sarcasm = makeSarcasm(msg);
   ctx.reply(sarcasm);
 });
 
