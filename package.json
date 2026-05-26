@@ -27,6 +27,6 @@
   "dependencies": {
     "express": "^4.20.0",
     "telegraf": "^3.36.0",
-    "uuid": "^3.4.0"
+    "uuid": "^14.0.0"
   }
 }
